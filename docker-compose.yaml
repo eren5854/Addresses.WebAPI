@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: address
-    container_name: SmartHomeServer
+    image: address-server
+    container_name: AddressServer
     ports:
       - 54040:8080

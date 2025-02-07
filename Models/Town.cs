@@ -5,7 +5,6 @@ namespace Addresses.WebAPI.Models;
 
 public sealed class Town : Entity
 {
-    [BsonElement("cityId"), BsonRepresentation(BsonType.ObjectId)]
-    public Guid CityId { get; set; }
-    public City City { get; set; } = default!;
+    [BsonElement("cityCode"), BsonRepresentation(BsonType.String)]
+    public string? CityCode { get; set; }
 }

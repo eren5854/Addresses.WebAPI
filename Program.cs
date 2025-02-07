@@ -11,6 +11,14 @@ builder.Services.AddScoped<ApplicationDbContext>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 
+builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<ICityService, CityService>();
+
+builder.Services.AddScoped<ITownRepository, TownRepository>();
+builder.Services.AddScoped<ITownService, TownService>();
+
+builder.Services.AddScoped<IAddressService, AddressService>();
+
 builder.Services.AddControllers();
 //builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();

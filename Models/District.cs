@@ -6,6 +6,6 @@ namespace Addresses.WebAPI.Models;
 public sealed class District : Entity
 {
     [BsonElement("townId"), BsonRepresentation(BsonType.ObjectId)]
-    public Guid TownId { get; set; }
+    public string? TownId { get; set; }
     public Town Town { get; set; } = default!;
 }

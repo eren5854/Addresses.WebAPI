@@ -45,6 +45,16 @@ public sealed class CountryRepository(
         return await _countries.Find(filter).FirstOrDefaultAsync(cancellationToken);
     }
 
+    //public async Task<Country> GetByCode(string code, CancellationToken cancellationToken)
+    //{
+    //    var filter = Builders<Country>.Filter.Eq(x => x.Code, code);
+    //    var country = await _countries.Find(filter).FirstOrDefaultAsync(cancellationToken);
+    //    return new Country(
+    //        country.Name!,
+    //        country.Code!
+    //        );
+    //}
+
     public async Task<string> Update(Country country, CancellationToken cancellationToken)
     {
         var filter = Builders<Country>.Filter.Eq(x => x.Id, country.Id);

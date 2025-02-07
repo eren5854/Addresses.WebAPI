@@ -1,0 +1,11 @@
+services:
+
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: address
+    container_name: SmartHomeServer
+    ports:
+      - 54040:8080
